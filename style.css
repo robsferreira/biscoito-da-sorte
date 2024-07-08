@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(45deg, #2A05A3 0%, #BB00FF 100%);
+    animation: gradient 4s ease infinite;
+    background-size: 200% 200%;
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes position {
+    0% {
+        transform: translateY(150px) scale(5%);
+    }
+    100% {
+        transform: translateY(0px) scale(100%);
+    }
+}
+
+@keyframes shake {
+    10% {
+        transform: translateX(3px) rotate(2deg);
+        transform: translateX(3px) rotate(2deg);
+    }
+    20% {
+        transform: translateX(-3px) rotate(-2deg);
+        transform: translateX(-3px) rotate(-2deg);
+    }
+    30% {
+        transform: translateX(3px) rotate(2deg);
+        transform: translateX(3px) rotate(2deg);
+    }
+    40% {
+        transform: translateX(-3px) rotate(-2deg);
+        transform: translateX(-3px) rotate(-2deg);
+    }
+    50% {
+        transform: translateX(2px) rotate(1deg);
+        transform: translateX(2px) rotate(1deg);
+    }
+    60% {
+        transform: translateX(-2px) rotate(-1deg);
+        transform: translateX(-2px) rotate(-1deg);
+    }
+    70% {
+        transform: translateX(2px) rotate(1deg);
+        transform: translateX(2px) rotate(1deg);
+    }
+    80% {
+        transform: translateX(-2px) rotate(-1deg);
+        transform: translateX(-2px) rotate(-1deg);
+    }
+    90% {
+        transform: translateX(1px) rotate(0);
+        transform: translateX(1px) rotate(0);
+    }
+    100% {
+        transform: translateX(-1px) rotate(0);
+        transform: translateX(-1px) rotate(0);
+    }
+}
+
+main {
+    box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.8);
+    background: #fbf7f0;
+    border-radius: 5px;
+    width: 428px;
+    height: 424px;
+}
+
+.hide {
+    display: none;
+}
+
+div {
+    padding: 48px 64px;
+}
+
+h1 {
+    font-size: 24px;
+    line-height: 29.26px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+h2 {
+    font-size: 20px;
+    line-height: 29.26px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.screen1 p {
+    text-align: center;
+    font-size: 15px;
+    line-height: 50px;
+    font-family: 'DM Sans', sans-serif;
+}
+
+.screen2 p {
+    background: #FBF7F0;
+    box-shadow: 2px 2px 2px rgba(85, 85, 85, 0.5);
+    font-size: 24px;
+    line-height: 29px;
+    font-family: 'Dancing Script', sans-serif;
+    animation-name: position;
+    animation-duration: 2s;
+}
+
+button {
+    background: #FF9500;
+    border-radius: 4px;
+    padding: 16px;
+    gap: 10px;
+    align-items: center;
+    width: 174px;
+    height: 52px;
+    margin: 18px 64px;
+    color: #FFFFFF;
+    font-size: 15px;
+    line-height: 20px;
+    font-family: 'DM Sans';
+    border: none;
+}
+
+#img:hover {
+    animation: shake 0.52s ease infinite;
+}
+
+button:hover {
+    background: #A76B18;
+    cursor: pointer;
+}
